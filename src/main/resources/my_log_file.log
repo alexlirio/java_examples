@@ -1,0 +1,4 @@
+2020-01-07 12:12:58,126 INFO b.c.e.Log4js [main] Info XXX - 1
+2020-01-07 12:13:15,269 WARN b.c.e.Log4js [main] Warn XXX - 1
+2020-01-07 12:32:03,515 INFO b.c.e.Log4js [main] Info XXX - 1
+2020-01-07 12:34:39,000 INFO b.c.e.Log4js [main] Info XXX - 1
