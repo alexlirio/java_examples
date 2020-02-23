@@ -1,15 +1,15 @@
 # Java Examples
-Projeto Java usado para anotações de diversos exemplos e testes.
+Java Project used for basic annotations and tests.
 
 
-Exemplos com:
-- Arquivos
-- CalculaProximoDiaUtil
+Examples with:
+- File
+- CalcNextUtilDay
 - Collections
-- Data
+- Date
 - Debug
 - EncryptDecryptWithDESUsingPassPhrase
-- Enumerador
+- Enumerator
 - GoogleQRCode
 - GoogleShortner
 - JasperReportRelatorios
@@ -19,3 +19,4 @@ Exemplos com:
 - SMS
 - String
 - Thread
+- Matrix
