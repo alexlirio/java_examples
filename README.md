@@ -19,4 +19,5 @@ Examples with:
 - SMS
 - String
 - Thread
-- Matrix
+- Matrixes
+- Gitflow
