@@ -19,7 +19,4 @@ Examples with:
 - SMS
 - String
 - Thread
-- Matrixe
-- Gitflow new
-- 001
-
+- Matrix
