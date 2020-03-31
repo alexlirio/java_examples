@@ -20,6 +20,3 @@ Examples with:
 - String
 - Thread
 - Matrix
-- 001
-- 002
-- 003
