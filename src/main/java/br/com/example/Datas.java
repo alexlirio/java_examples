@@ -28,8 +28,5 @@ public class Datas {
 		Date d2 = Date.from(ldt2.atZone(ZoneId.systemDefault()).toInstant());
 		System.out.println(d1);
 		System.out.println(d2);
-			
-		
 	}
-
 }

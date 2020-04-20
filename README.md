@@ -21,3 +21,4 @@ Examples with:
 - Thread
 - Matrix
 - Gitflow
+- Optional
