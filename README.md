@@ -22,3 +22,5 @@ Examples with:
 - Matrix
 - Gitflow
 - Optional
+- Lambda
+- Stream
