@@ -6,7 +6,9 @@ Examples with:
 - File
 - CalcNextUtilDay
 - Collections
-- Date
+- Date - Java 8
+- Duration - Java 8
+- Period - Java 8
 - Debug
 - EncryptDecryptWithDESUsingPassPhrase
 - Enumerator
