@@ -1,4 +1,4 @@
-package br.com.example;
+package br.com.example.java8.FunctionalProgramming;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.function.IntPredicate;
 import java.util.function.Predicate;
 
-public class Lambda {
+public class Test01_LambdaFunctionWithClass {
 
 	public static void main(String[] args) {
 		
