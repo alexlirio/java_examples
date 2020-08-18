@@ -1,4 +1,4 @@
-package br.com.example;
+package br.com.example.java8.FunctionalProgramming;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,7 +26,7 @@ import java.util.stream.Stream;
  * TreeSet			|	Good
  *
  */
-public class Stream01 {
+public class Test02_StreamWithClass {
 
 	public static void main(String[] args) {
 		////example 1 - object String[]

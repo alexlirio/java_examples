@@ -1,4 +1,4 @@
-package br.com.example;
+package br.com.example.java8.date;
 
 import java.text.SimpleDateFormat;
 import java.time.Instant;
@@ -14,11 +14,11 @@ import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 
-public class DatesJava8 {
+public class Dates {
 
 	public static void main(String[] args) {
 		
-		// Formata datas
+		// Format dates
 		String horaLimite = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date(113, 0, 1, 14, 30, 15));
 		System.out.println(horaLimite); // 20130101143015
 		Calendar c = Calendar.getInstance();
@@ -27,7 +27,7 @@ public class DatesJava8 {
 		String horaLimite2 = new SimpleDateFormat("yyyyMMddHHmmss").format(c.getTime());
 		System.out.println(horaLimite2); // 20200709154543
 		
-		// Java 8 - Formata datas
+		// Java 8 - Format dates
 //		String horaLimite = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date(113, 0, 1, 14, 30, 15));
 //		System.out.println(horaLimite); // 20130101143015
 //		Calendar c = Calendar.getInstance();

@@ -1,10 +1,12 @@
-package br.com.example;
+package br.com.example.java8.FunctionalProgramming;
 
 import java.util.Optional;
 
-public class OptionalTest01 {
+public class Test03_OptionalWithClass {
 
 	public static void main(String[] args) {
+		
+		// Optional with classes
 		
 		Insurance insurance = new Insurance();
 		insurance.setType("National");

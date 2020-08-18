@@ -2,13 +2,10 @@
 Java Project used for basic annotations and tests.
 
 
-Examples with:
+Java Examples:
 - File
 - CalcNextUtilDay
 - Collections
-- Date - Java 8
-- Duration - Java 8
-- Period - Java 8
 - Debug
 - EncryptDecryptWithDESUsingPassPhrase
 - Enumerator
@@ -23,7 +20,21 @@ Examples with:
 - Thread
 - Matrix
 - Gitflow
-- Optional
+- BigO
+- BinarySearch
+- VhPracticeTest
+
+Java 8 Examples:
+- Date
+- Duration
+- Period
 - Lambda
 - Stream
-- BigO
+- Optional
+- Reduce
+- Collect
+- Method Reference
+- Debug Stream
+- Functional Interface
+- Collections
+- Parallel Stream
