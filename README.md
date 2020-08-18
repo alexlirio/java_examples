@@ -21,6 +21,8 @@ Java Examples:
 - Matrix
 - Gitflow
 - BigO
+- BinarySearch
+- VhPracticeTest
 
 Java 8 Examples:
 - Date
