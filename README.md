@@ -22,10 +22,10 @@ Java Examples:
 - Gitflow
 - BigO
 - BinarySearch
-- VhPracticeTest
 - Fibonacci
 - BinaryTree
 - Permutation
+- Palindrome
 
 Java 8 Examples:
 - Date
