@@ -22,7 +22,6 @@ Java Examples:
 - Gitflow
 - BigO
 - BinarySearch
-- VhPracticeTest
 - Fibonacci
 - BinaryTree
 - Permutation
