@@ -23,6 +23,9 @@ Java Examples:
 - BigO
 - BinarySearch
 - VhPracticeTest
+- Fibonacci
+- BinaryTree
+- Permutation
 
 Java 8 Examples:
 - Date
