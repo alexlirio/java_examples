@@ -1,8 +1,8 @@
-package br.com.example.vhpracticetest;
+package br.com.example.techinterview;
 
 import java.util.HashSet;
 
-public class Test002 {
+public class FindAnyDuplicated {
 
 	public static void main(String[] args) {
 		int[] intArray = new int[]{5, 1, 2, 3, 4, 5};
