@@ -20,7 +20,7 @@ public class ComparatorAndComparable {
 	    playersComparator.sort(new PlayerComparator());
 	    System.out.println("After Sorting:  " + playersComparator);
 
-	    //#2 Comparable - Example with Comparable Interface Implementation (*Sorting by "age")
+	    //#3 Comparable - Example with Comparable Interface Implementation (*Sorting by "age")
 	    List<PlayerComparable> playersComparable = Arrays.asList(new PlayerComparable("Beth", 20), new PlayerComparable("Alex", 30), new PlayerComparable("Carl", 10));
 	    System.out.println("Before Sorting: " + playersComparable);
 	    Collections.sort(playersComparable);
