@@ -27,6 +27,7 @@ Java Examples:
 - BinaryTree
 - Permutation
 - Palindrome
+- Comparator and Comparable
 
 Java 8 Examples:
 - Date

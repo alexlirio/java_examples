@@ -3,7 +3,7 @@ package br.com.example;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Collections {
+public class CollectionsTest {
 	
 	public static void main(String[] args) {
 		List<String> list1 = new ArrayList<String>();
