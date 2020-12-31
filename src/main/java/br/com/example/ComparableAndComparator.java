@@ -8,31 +8,49 @@ import java.util.List;
 public class ComparatorAndComparable {
 
 	public static void main(String[] args) {
-		//#1 Comparator - Example with Lambda (*Sorting by "name")
+		
+		/**************************************************************
+		 * Differences
+		 * 
+		 * Comparable Interface
+		 * 1. Sort order: Default/Natural
+		 * 2. Package: java.lang
+		 * 3. Method(s): compareTo()
+		 * 4. Classes that implement: all wrapper classes and String
+		 * 
+		 * Comparator Interface
+		 * 1. Sort order: Customized
+		 * 2. Package: java.util
+		 * 3. Method(s): compare() and equals()
+		 * 4. Classes that implement: Collator and RuleBasedCollator
+		 *
+		 **************************************************************/
+		
+		//#1 Comparable - Example with Comparable Interface Implementation (*Sorting by "age")
+		List<PlayerComparable> playersComparable = Arrays.asList(new PlayerComparable("Beth", 20), new PlayerComparable("Alex", 30), new PlayerComparable("Carl", 10));
+		System.out.println("Before Sorting: " + playersComparable);
+		Collections.sort(playersComparable);
+		System.out.println("After Sorting:  " + playersComparable);
+		
+		//#2 Comparator - Example with Comparator Interface Implementation (*Sorting by "name")
+		List<PlayerComparator> playersComparator = Arrays.asList(new PlayerComparator("Beth", 20), new PlayerComparator("Alex", 30), new PlayerComparator("Carl", 10));
+		System.out.println("Before Sorting: " + playersComparator);
+		playersComparator.sort(new PlayerComparator());
+		System.out.println("After Sorting:  " + playersComparator);
+		
+		//#3 Comparator - Example with Lambda (*Sorting by "name")
 		List<Player> players = Arrays.asList(new Player("Beth", 20), new Player("Alex", 30), new Player("Carl", 10));
 	    System.out.println("Before Sorting: " + players);
 	    players.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
 	    System.out.println("After Sorting:  " + players);
-
-		//#2 Comparator - Example with Comparator Interface Implementation (*Sorting by "name")
-	    List<PlayerComparator> playersComparator = Arrays.asList(new PlayerComparator("Beth", 20), new PlayerComparator("Alex", 30), new PlayerComparator("Carl", 10));
-	    System.out.println("Before Sorting: " + playersComparator);
-	    playersComparator.sort(new PlayerComparator());
-	    System.out.println("After Sorting:  " + playersComparator);
-
-	    //#3 Comparable - Example with Comparable Interface Implementation (*Sorting by "age")
-	    List<PlayerComparable> playersComparable = Arrays.asList(new PlayerComparable("Beth", 20), new PlayerComparable("Alex", 30), new PlayerComparable("Carl", 10));
-	    System.out.println("Before Sorting: " + playersComparable);
-	    Collections.sort(playersComparable);
-	    System.out.println("After Sorting:  " + playersComparable);
 	}
 }
 
-class Player {
+class PlayerComparable implements Comparable<PlayerComparable> {
 	private String name;
 	private int age;
 	
-	public Player(String name, int age) {
+	public PlayerComparable(String name, int age) {
 		super();
 		this.name = name;
 		this.age = age;
@@ -55,8 +73,13 @@ class Player {
 	}
 	
 	@Override
+	public int compareTo(PlayerComparable otherPlayer) {
+		return Integer.compare(this.getAge(), otherPlayer.getAge());
+	}
+	
+	@Override
 	public String toString() {
-		return "Player [name=" + name + ", age=" + age + "]";
+		return "PlayerComparable [name=" + name + ", age=" + age + "]";
 	}
 }
 
@@ -101,11 +124,11 @@ class PlayerComparator implements Comparator<PlayerComparator> {
 	}
 }
 
-class PlayerComparable implements Comparable<PlayerComparable> {
+class Player {
 	private String name;
 	private int age;
 	
-	public PlayerComparable(String name, int age) {
+	public Player(String name, int age) {
 		super();
 		this.name = name;
 		this.age = age;
@@ -128,12 +151,7 @@ class PlayerComparable implements Comparable<PlayerComparable> {
 	}
 	
 	@Override
-	public int compareTo(PlayerComparable otherPlayer) {
-		return Integer.compare(this.getAge(), otherPlayer.getAge());
-	}
-	
-	@Override
 	public String toString() {
-		return "PlayerComparable [name=" + name + ", age=" + age + "]";
+		return "Player [name=" + name + ", age=" + age + "]";
 	}
 }
