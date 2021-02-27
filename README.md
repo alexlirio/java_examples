@@ -27,7 +27,9 @@ Java Examples:
 - BinaryTree
 - Permutation
 - Palindrome
-- Comparator and Comparable
+- Comparable and Comparator
+- JUnit
+- JWT Generator
 
 Java 8 Examples:
 - Date
