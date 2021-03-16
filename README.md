@@ -31,6 +31,9 @@ Java Examples:
 - JUnit
 - JWT Generator
 
+Data Structures:
+- Array (Vector)
+
 Java 8 Examples:
 - Date
 - Duration
