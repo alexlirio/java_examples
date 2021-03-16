@@ -1,16 +1,29 @@
-package br.com.example.structure.arrayorvector;
+package br.com.example.structure.array;
 
-public class MyArrayObject {
+import java.lang.reflect.Array;
 
-	private Object[] elements;
+public class MyList<T> {
+
+	private T[] elements;
 	private int size;
 
-	public MyArrayObject(int capacity){
-		this.elements = new Object[capacity];
+	@SuppressWarnings("unchecked")
+	public MyList(int capacity) {
+		this.elements = (T[]) new Object[capacity]; // solution from the 'Effective Java Book'
 		this.size = 0;
 	}
 
-	public boolean add(Object element) {
+	public MyList(){
+		this(10);
+	}
+
+	@SuppressWarnings("unchecked")
+	public MyList(int capacity, Class<T> classeType){
+		this.elements = (T[]) Array.newInstance(classeType, capacity);
+		this.size = 0;
+	}
+
+	public boolean add(T element) {
 		this.increaseCapacity();
 		if (this.size < this.elements.length) {
 			this.elements[this.size] = element;
@@ -23,7 +36,7 @@ public class MyArrayObject {
 	// 0 1 2 3 4 5 6 = the size is 5
 	// B C E F G + +
 	//
-	public boolean add(int position, Object element) {
+	public boolean add(int position, T element) {
 
 		if (!(position >= 0 && position < size)) {
 			throw new IllegalArgumentException("Invalid Position");
@@ -41,9 +54,10 @@ public class MyArrayObject {
 		return true;
 	}
 
+	@SuppressWarnings("unchecked")
 	private void increaseCapacity() {
 		if (this.size == this.elements.length) {
-			Object[] newElements = new Object[this.elements.length * 2];
+			T[] newElements = (T[]) new Object[this.elements.length * 2];
 			for (int i = 0; i < this.elements.length; i++) {
 				newElements[i] = this.elements[i];
 			}
@@ -51,20 +65,41 @@ public class MyArrayObject {
 		}
 	}
 
-	public Object get(int position) {
+	public T get(int position) {
 		if (!(position >= 0 && position < size)) {
 			throw new IllegalArgumentException("Invalid Position");
 		}
 		return this.elements[position];
 	}
 
-	public int getIndexOf(Object element) {
+	public int getIndexOf(T element) {
 		for (int i = 0; i < this.size; i++) {
 			if (this.elements[i].equals(element)) {
 				return i;
 			}
 		}
 		return -1;
+	}
+
+	public int getLastIndexOf(T element) {
+
+		for (int i = this.size - 1; i >= 0; i--) {
+			if (this.elements[i].equals(element)) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	public boolean has(T element) {
+
+//		int position = getIndexOf(element);
+//		if (position > -1) {
+//			return true;
+//		}
+//		return false;
+
+		return getIndexOf(element) > -1; // >=0
 	}
 
 	// B D E F F -> the position to remove is 1 (G)
@@ -80,6 +115,27 @@ public class MyArrayObject {
 			this.elements[i] = this.elements[i + 1];
 		}
 		this.size--;
+	}
+
+	public void remove(T element) {
+		int pos = this.getIndexOf(element);
+		if (pos > -1) {
+			this.remove(pos);
+		}
+	}
+
+	public void clean() {
+		// option 1
+		// this.elements = (T[]) new Object[this.elements.length];
+
+		// option 2
+		// this.size = 0;
+
+		// option 3
+		for (int i = 0; i < this.size; i++) {
+			this.elements[i] = null;
+		}
+		this.size = 0;
 	}
 
 	public int size() {

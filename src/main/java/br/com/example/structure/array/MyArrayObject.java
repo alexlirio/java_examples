@@ -1,34 +1,16 @@
-package br.com.example.structure.arrayorvector;
+package br.com.example.structure.array;
 
-public class MyArray {
+public class MyArrayObject {
 
-	private String[] elements;
+	private Object[] elements;
 	private int size;
 
-	public MyArray(int capacity) {
-		this.elements = new String[capacity];
+	public MyArrayObject(int capacity){
+		this.elements = new Object[capacity];
 		this.size = 0;
 	}
 
-//	public void add(String element) {
-//		for (int i = 0; i < this.elements.length; i++) {
-//			if (this.elements[i] == null) {
-//				this.elements[i] = element;
-//				break;
-//			}
-//		}
-//	}
-
-//	public void add(String element) throws Exception {
-//		if (this.size < this.elements.length) {
-//			this.elements[this.size] = element;
-//			this.size++;
-//		} else {
-//			throw new Exception("Array(Vetor) is full, is not possible to add more elements");
-//		}
-//	}
-
-	public boolean add(String element) {
+	public boolean add(Object element) {
 		this.increaseCapacity();
 		if (this.size < this.elements.length) {
 			this.elements[this.size] = element;
@@ -41,7 +23,7 @@ public class MyArray {
 	// 0 1 2 3 4 5 6 = the size is 5
 	// B C E F G + +
 	//
-	public boolean add(int position, String element) {
+	public boolean add(int position, Object element) {
 
 		if (!(position >= 0 && position < size)) {
 			throw new IllegalArgumentException("Invalid Position");
@@ -61,7 +43,7 @@ public class MyArray {
 
 	private void increaseCapacity() {
 		if (this.size == this.elements.length) {
-			String[] newElements = new String[this.elements.length * 2];
+			Object[] newElements = new Object[this.elements.length * 2];
 			for (int i = 0; i < this.elements.length; i++) {
 				newElements[i] = this.elements[i];
 			}
@@ -69,14 +51,14 @@ public class MyArray {
 		}
 	}
 
-	public String get(int position) {
+	public Object get(int position) {
 		if (!(position >= 0 && position < size)) {
 			throw new IllegalArgumentException("Invalid Position");
 		}
 		return this.elements[position];
 	}
 
-	public int getIndexOf(String element) {
+	public int getIndexOf(Object element) {
 		for (int i = 0; i < this.size; i++) {
 			if (this.elements[i].equals(element)) {
 				return i;

@@ -1,4 +1,4 @@
-package br.com.example.structure.arrayorvector;
+package br.com.example.structure.array;
 
 import br.com.example.structure.base.StaticStructure;
 

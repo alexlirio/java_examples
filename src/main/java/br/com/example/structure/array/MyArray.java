@@ -1,29 +1,34 @@
-package br.com.example.structure.arrayorvector;
+package br.com.example.structure.array;
 
-import java.lang.reflect.Array;
+public class MyArray {
 
-public class MyList<T> {
-
-	private T[] elements;
+	private String[] elements;
 	private int size;
 
-	@SuppressWarnings("unchecked")
-	public MyList(int capacity) {
-		this.elements = (T[]) new Object[capacity]; // solution from the 'Effective Java Book'
+	public MyArray(int capacity) {
+		this.elements = new String[capacity];
 		this.size = 0;
 	}
 
-	public MyList(){
-		this(10);
-	}
+//	public void add(String element) {
+//		for (int i = 0; i < this.elements.length; i++) {
+//			if (this.elements[i] == null) {
+//				this.elements[i] = element;
+//				break;
+//			}
+//		}
+//	}
 
-	@SuppressWarnings("unchecked")
-	public MyList(int capacity, Class<T> classeType){
-		this.elements = (T[]) Array.newInstance(classeType, capacity);
-		this.size = 0;
-	}
+//	public void add(String element) throws Exception {
+//		if (this.size < this.elements.length) {
+//			this.elements[this.size] = element;
+//			this.size++;
+//		} else {
+//			throw new Exception("Array(Vetor) is full, is not possible to add more elements");
+//		}
+//	}
 
-	public boolean add(T element) {
+	public boolean add(String element) {
 		this.increaseCapacity();
 		if (this.size < this.elements.length) {
 			this.elements[this.size] = element;
@@ -36,7 +41,7 @@ public class MyList<T> {
 	// 0 1 2 3 4 5 6 = the size is 5
 	// B C E F G + +
 	//
-	public boolean add(int position, T element) {
+	public boolean add(int position, String element) {
 
 		if (!(position >= 0 && position < size)) {
 			throw new IllegalArgumentException("Invalid Position");
@@ -54,10 +59,9 @@ public class MyList<T> {
 		return true;
 	}
 
-	@SuppressWarnings("unchecked")
 	private void increaseCapacity() {
 		if (this.size == this.elements.length) {
-			T[] newElements = (T[]) new Object[this.elements.length * 2];
+			String[] newElements = new String[this.elements.length * 2];
 			for (int i = 0; i < this.elements.length; i++) {
 				newElements[i] = this.elements[i];
 			}
@@ -65,41 +69,20 @@ public class MyList<T> {
 		}
 	}
 
-	public T get(int position) {
+	public String get(int position) {
 		if (!(position >= 0 && position < size)) {
 			throw new IllegalArgumentException("Invalid Position");
 		}
 		return this.elements[position];
 	}
 
-	public int getIndexOf(T element) {
+	public int getIndexOf(String element) {
 		for (int i = 0; i < this.size; i++) {
 			if (this.elements[i].equals(element)) {
 				return i;
 			}
 		}
 		return -1;
-	}
-
-	public int getLastIndexOf(T element) {
-
-		for (int i = this.size - 1; i >= 0; i--) {
-			if (this.elements[i].equals(element)) {
-				return i;
-			}
-		}
-		return -1;
-	}
-
-	public boolean has(T element) {
-
-//		int position = getIndexOf(element);
-//		if (position > -1) {
-//			return true;
-//		}
-//		return false;
-
-		return getIndexOf(element) > -1; // >=0
 	}
 
 	// B D E F F -> the position to remove is 1 (G)
@@ -115,27 +98,6 @@ public class MyList<T> {
 			this.elements[i] = this.elements[i + 1];
 		}
 		this.size--;
-	}
-
-	public void remove(T element) {
-		int pos = this.getIndexOf(element);
-		if (pos > -1) {
-			this.remove(pos);
-		}
-	}
-
-	public void clean() {
-		// option 1
-		// this.elements = (T[]) new Object[this.elements.length];
-
-		// option 2
-		// this.size = 0;
-
-		// option 3
-		for (int i = 0; i < this.size; i++) {
-			this.elements[i] = null;
-		}
-		this.size = 0;
 	}
 
 	public int size() {
