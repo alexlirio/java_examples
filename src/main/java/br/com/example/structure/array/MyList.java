@@ -72,7 +72,7 @@ public class MyList<T> {
 		return this.elements[position];
 	}
 
-	public int getIndexOf(T element) {
+	public int indexOf(T element) {
 		for (int i = 0; i < this.size; i++) {
 			if (this.elements[i].equals(element)) {
 				return i;
@@ -81,7 +81,7 @@ public class MyList<T> {
 		return -1;
 	}
 
-	public int getLastIndexOf(T element) {
+	public int lastIndexOf(T element) {
 
 		for (int i = this.size - 1; i >= 0; i--) {
 			if (this.elements[i].equals(element)) {
@@ -99,7 +99,7 @@ public class MyList<T> {
 //		}
 //		return false;
 
-		return getIndexOf(element) > -1; // >=0
+		return indexOf(element) > -1; // >=0
 	}
 
 	// B D E F F -> the position to remove is 1 (G)
@@ -118,7 +118,7 @@ public class MyList<T> {
 	}
 
 	public void remove(T element) {
-		int pos = this.getIndexOf(element);
+		int pos = this.indexOf(element);
 		if (pos > -1) {
 			this.remove(pos);
 		}

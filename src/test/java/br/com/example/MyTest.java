@@ -22,7 +22,7 @@ public class MyTest {
 	}
 	
 	@After
-	public void deleteOutputFile() {
+	public void deleteContent() {
 		text = null;
 	}
 

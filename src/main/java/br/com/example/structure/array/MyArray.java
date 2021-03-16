@@ -76,7 +76,7 @@ public class MyArray {
 		return this.elements[position];
 	}
 
-	public int getIndexOf(String element) {
+	public int indexOf(String element) {
 		for (int i = 0; i < this.size; i++) {
 			if (this.elements[i].equals(element)) {
 				return i;

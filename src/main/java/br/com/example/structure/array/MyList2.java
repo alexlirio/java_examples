@@ -24,14 +24,14 @@ public class MyList2<T> extends StaticStructure<T> {
 		super.remove(position);
 	}
 
-	public T busca(int position) {
+	public T get(int position) {
 		if (!(position >= 0 && position < size)) {
 			throw new IllegalArgumentException("Invalid Position");
 		}
 		return elements[position];
 	}
 
-	public int busca(T element) {
+	public int indexOf(T element) {
 		for (int i = 0; i < size; i++) {
 			if (elements[i].equals(element)) {
 				return i;
