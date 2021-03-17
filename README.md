@@ -33,6 +33,7 @@ Java Examples:
 
 Data Structures:
 - Array (Vector)
+- Stack
 
 Java 8 Examples:
 - Date
