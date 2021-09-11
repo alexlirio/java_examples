@@ -1,0 +1,43 @@
+2019-06-12 15:39:04,359 INFO o.h.Version [main] HHH000412: Hibernate Core {5.4.1.Final}
+2019-06-12 15:39:04,702 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-06-12 15:39:05,041 WARN o.h.o.c.pooling [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 15:39:05,049 INFO o.h.o.c.pooling [main] HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://127.0.0.1:3306/jpa_financas]
+2019-06-12 15:39:05,049 INFO o.h.o.c.pooling [main] HHH10001001: Connection properties: {user=root, password=****}
+2019-06-12 15:39:05,049 INFO o.h.o.c.pooling [main] HHH10001003: Autocommit mode: false
+2019-06-12 15:39:05,060 INFO o.h.e.j.c.i.DriverManagerConnectionProviderImpl [main] HHH000115: Hibernate connection pool size: 20 (min=1)
+2019-06-12 15:39:05,610 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-12 15:39:06,997 INFO o.h.o.c.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@65036e8d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2019-06-12 15:39:07,547 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-06-12 15:39:26,056 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: financas]
+2019-06-12 15:39:26,233 INFO o.h.Version [main] HHH000412: Hibernate Core {5.4.1.Final}
+2019-06-12 15:39:26,492 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-06-12 15:39:26,808 WARN o.h.o.c.pooling [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 15:39:26,818 INFO o.h.o.c.pooling [main] HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://127.0.0.1:3306/jpa_financas]
+2019-06-12 15:39:26,819 INFO o.h.o.c.pooling [main] HHH10001001: Connection properties: {user=root, password=****}
+2019-06-12 15:39:26,820 INFO o.h.o.c.pooling [main] HHH10001003: Autocommit mode: false
+2019-06-12 15:39:26,826 INFO o.h.e.j.c.i.DriverManagerConnectionProviderImpl [main] HHH000115: Hibernate connection pool size: 20 (min=1)
+2019-06-12 15:39:27,355 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-12 15:39:28,745 INFO o.h.o.c.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7a814310] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2019-06-12 15:39:28,991 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-06-12 15:40:27,267 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: financas]
+2019-06-12 15:40:27,371 INFO o.h.Version [main] HHH000412: Hibernate Core {5.4.1.Final}
+2019-06-12 15:40:27,535 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-06-12 15:40:27,700 WARN o.h.o.c.pooling [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 15:40:27,706 INFO o.h.o.c.pooling [main] HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://127.0.0.1:3306/jpa_financas]
+2019-06-12 15:40:27,707 INFO o.h.o.c.pooling [main] HHH10001001: Connection properties: {user=root, password=****}
+2019-06-12 15:40:27,707 INFO o.h.o.c.pooling [main] HHH10001003: Autocommit mode: false
+2019-06-12 15:40:27,710 INFO o.h.e.j.c.i.DriverManagerConnectionProviderImpl [main] HHH000115: Hibernate connection pool size: 20 (min=1)
+2019-06-12 15:40:28,144 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-12 15:40:28,970 INFO o.h.o.c.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@68a4dcc6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2019-06-12 15:40:29,181 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-06-12 15:40:48,879 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: financas]
+2019-06-12 15:40:48,972 INFO o.h.Version [main] HHH000412: Hibernate Core {5.4.1.Final}
+2019-06-12 15:40:49,115 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-06-12 15:40:49,266 WARN o.h.o.c.pooling [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 15:40:49,271 INFO o.h.o.c.pooling [main] HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://127.0.0.1:3306/jpa_financas]
+2019-06-12 15:40:49,272 INFO o.h.o.c.pooling [main] HHH10001001: Connection properties: {user=root, password=****}
+2019-06-12 15:40:49,272 INFO o.h.o.c.pooling [main] HHH10001003: Autocommit mode: false
+2019-06-12 15:40:49,274 INFO o.h.e.j.c.i.DriverManagerConnectionProviderImpl [main] HHH000115: Hibernate connection pool size: 20 (min=1)
+2019-06-12 15:40:49,721 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-12 15:40:50,523 INFO o.h.o.c.access [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2eae4349] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2019-06-12 15:40:50,737 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]

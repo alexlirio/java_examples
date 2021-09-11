@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration package="log4j.test" status="WARN">
+	<Appenders>
+		<Console name="ConsoleAppender" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<RollingFile name="RollingFileAppender" fileName="src/main/resources/my_log_file.log"
+			filePattern="src/main/resources/my_log_file-%d{yyy-MM-dd}-%i.log.gz">
+			<PatternLayout>
+				<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="1024 MB" />
+			</Policies>
+		</RollingFile>
+		
+		<Http name="HttpAppender" url="http://127.0.0.1:6060/logserver/log/" method="POST">
+			<Property name="X-Java-Runtime" value="$${java:runtime}" />
+			<JsonLayout properties="true"/>
+			<Property name="connectTimeoutMillis" value="5" />
+			<Property name="readTimeoutMillis" value="5" />
+		</Http>
+		
+	</Appenders>
+	<Loggers>
+		<Root level="info">
+			<AppenderRef ref="ConsoleAppender" />
+			<AppenderRef ref="RollingFileAppender" />
+			
+			<AppenderRef ref="HttpAppender"/>
+			
+		</Root>
+	</Loggers>
+</Configuration>
